@@ -1,0 +1,116 @@
+:root{
+    --red__bg: hsl(0, 100%, 74%) ;
+    --green__btn: hsl(154, 59%, 51%);
+    --blue__btn: hsl(248, 32%, 49%);
+    --dark__form: hsl(249, 10%, 26%);
+    --grey__footer: hsl(246, 25%, 77%);
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red__bg);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem;
+    background: url(images/bg-intro-desktop.png) no-repeat;
+    background-size: cover;
+    background-color: var(--red__bg);
+}
+
+section {
+    max-width: 100%;
+    width: 50%;
+}
+
+.left__main__text {
+    color: white;
+}
+
+.purple__button p {
+    padding: 20px 0;
+}
+
+form {
+    width: 90%;
+    background-color: #fefefe;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    padding: 17px 25px;
+    margin: 7px 0;
+    border-radius: 5px;
+    border: 1px solid hsl(249, 10%, 26%, 0.3);
+    font-weight: 600;
+}
+
+button {
+    background-color: var(--green__btn);
+    color: #fefefe;
+    text-transform: uppercase;
+    /* border: 1px solid darkgreen; */
+    font-size: 16px;
+}
+
+form p {
+    margin: 10px auto 20px;
+    font-size: 12px;
+    color: var(--grey__footer);
+    font-weight: 600;
+}
+
+form a {
+    text-decoration: none;
+    color: var(--red__bg);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 55px;
+    margin-bottom: 30px;
+}
+
+.left__main__text p {
+    width: 55ch;
+}
+
+.purple__button {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--grey__footer);
+    background-color: var(--blue__btn);
+    border-radius: 10px;
+    box-shadow: 0 10px rgb(0, 0, 0, 0.2);
+}
+
+.purple__button span {
+    color: #fefefe;
+    font-weight: 600;
+}
