@@ -18,6 +18,7 @@
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--red__bg);
@@ -29,14 +30,14 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15rem;
+    padding:  0 15rem 0;
     background: url(images/bg-intro-desktop.png) no-repeat;
     background-size: cover;
     background-color: var(--red__bg);
 }
 
 section {
-    max-width: 100%;
+    max-width: 50%;
     width: 50%;
 }
 
@@ -44,16 +45,41 @@ section {
     color: white;
 }
 
+h1 {
+    margin-bottom: 30px;
+    font-size: 3.5rem;
+    line-height: 70px;
+}
+
+.left__main__text p {
+    font-size: 1.3rem;
+}
+
+.purple__button {
+    width: 80%;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--grey__footer);
+    background-color: var(--blue__btn);
+    border-radius: 10px;
+    box-shadow: 0 10px rgb(0, 0, 0, 0.2);
+}
+
 .purple__button p {
     padding: 20px 0;
 }
 
+.purple__button span {
+    color: #fefefe;
+    font-weight: 600;
+}
+
 form {
     width: 80%;
-    background-color: #fefefe;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    background-color: #fefefe;
     border-radius: 10px;
 }
 
@@ -62,9 +88,59 @@ form div {
     flex-direction: column;
 }
 
+input, button {
+    padding: 17px 25px;
+    border: 1px solid hsl(249, 10%, 26%, 0.3);
+    border-radius: 5px;
+    font-weight: 600;
+    caret-color: var(--blue__btn);
+}
+
+/* czyli na click reaguje */
+input:focus {
+    outline: 1px solid var(--blue__btn);
+}
+
+button {
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #fefefe;
+    background-color: var(--green__btn);
+    border: 2px solid hsla(154, 68%, 33%, 0.3);
+    border-bottom: 5px solid hsla(154, 68%, 33%, 0.3);
+    /* bcs border-bottom didnt have border radius from latest indicator */
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form p {
+    margin: 10px auto 20px;
+    color: var(--grey__footer);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+form a {
+    color: var(--red__bg);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ERROR MESSAGE */
+/* height if do not want our form to stretch vertical while validating (we want in this case) */
+form div .error {
+    /* height: 1rem; */
+    margin: 7px 0 15px;
+    color: var(--red__bg);
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: right;
+}
+
 .success input{
     color: var(--green__btn);
-    border-width: 2px;
     border: 2px solid var(--green__btn);
     background: url(images/icon-success.svg) no-repeat;
     /* some complications, idk how to use such svg as frontendmentor provides, mine is bigger, and has different code;/ */
@@ -80,83 +156,29 @@ form div {
     background-position: 97% 50%;
 }
 
-form div .error {
-    /* height: 1rem; */
-    margin: 7px 0 15px;
-    color: var(--red__bg);
-    font-size: 0.7rem;
-    font-weight: 500;
-    font-style: italic;
-    text-align: right;
+footer {
+    /* tutaj wlasnie chcemy zastosowac padding, poniewaz elementy sa wycentrowane w pionie i margin spowoduje,
+    ze przesunie sie wszystko w gore a padding to oddalenie od tego elementu wiec wszystko wtedy git */
+    /* MARGIN ODDALA ELEMENTY OD NASZEGO CORE ELEMENTU, NATOMIAST PADDING ODDALA NASZ CORE ELEMENT OD INNYCH ELEMENTOW */
+    padding: 50px;
 }
 
-input, button {
-    padding: 17px 25px;
-    border-radius: 5px;
-    border: 1px solid hsl(249, 10%, 26%, 0.3);
-    font-weight: 600;
-    caret-color: var(--blue__btn);
-}
-
-/* czyli na click reaguje */
-input:focus {
-    outline: 1px solid var(--blue__btn);
-}
-
-button {
-    padding-bottom: 15px;
-    background-color: var(--green__btn);
-    color: #fefefe;
-    text-transform: uppercase;
-    border: 2px solid hsla(154, 68%, 33%, 0.3);
-    border-bottom: 5px solid hsla(154, 68%, 33%, 0.3);
-    /* bcs border-bottom didnt have border radius from latest indicator */
-    border-radius: 7px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-form p {
-    margin: 10px auto 20px;
-    font-size: 12px;
-    color: var(--grey__footer);
-    font-weight: 600;
-}
-
-form a {
+.attribution a {
+    padding: 3px;
+    color: rgb(93, 17, 207);
     text-decoration: none;
-    color: var(--red__bg);
-    font-weight: bold;
+    transition: all 0.15s;
 }
 
-h1 {
-    font-size: 3.5rem;
-    line-height: 70px;
-    margin-bottom: 30px;
-}
-
-.left__main__text p {
-    font-size: 1.3rem;
-}
-
-.purple__button {
-    width: 80%;
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--grey__footer);
-    background-color: var(--blue__btn);
-    border-radius: 10px;
-    box-shadow: 0 10px rgb(0, 0, 0, 0.2);
-}
-
-.purple__button span {
-    color: #fefefe;
-    font-weight: 600;
+.attribution a:hover {
+    color: white;
+    background-color: rgb(93, 17, 207);
+    border-radius: 5px;
 }
 
 @media (max-width: 1400px) {
     main {
-        padding: 7rem;
+        padding: 0 7rem 0;
     }
 }
 
@@ -166,7 +188,7 @@ h1 {
     }
     
     main {
-        padding: 5rem;
+        padding: 0 5rem 0;
         flex-direction: column;
     }
 
@@ -190,7 +212,7 @@ h1 {
 
 @media (max-width: 620px) {
     main {
-        padding: 2rem;
+        padding: 0 2rem 0;
         background: url(images/bg-intro-desktop.png) no-repeat;
         background-size: cover;
         background-color: var(--red__bg);
@@ -206,5 +228,9 @@ h1 {
 
     .purple__button p {
         padding: 20px 50px;
+    }
+
+    .attribution {
+        font-size: 0.85rem;
     }
 }

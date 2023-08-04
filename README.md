@@ -39,8 +39,11 @@ The challenge was to code site with form validation
 
 I learned how to do good (no live yet) form valitadion in js, including css properties, such as border and text color in case of the error or success
 
-How to do semantic HTML, and how to style its components inside CSS
+How to write semantic HTML, and how to style its components inside CSS
 
+A bit responsive design, different styles, font-sizes, flexbox on smartphone screen
+
+Also I added an success (tic) icon, when input inside form is correctly filled, there wasn't such one default, feel free to use it
 
 ### Useful resources
 
