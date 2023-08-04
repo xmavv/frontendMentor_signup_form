@@ -23,6 +23,9 @@ body {
     align-items: center;
     background-color: var(--red__bg);
     overflow: hidden;
+    background: url(images/bg-intro-desktop.png) no-repeat;
+    background-size: cover;
+    background-color: var(--red__bg);
 }
 
 main {
@@ -30,14 +33,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:  0 15rem 0;
-    background: url(images/bg-intro-desktop.png) no-repeat;
-    background-size: cover;
-    background-color: var(--red__bg);
+    padding: 0 15rem 4rem;
 }
 
+/* MARGIN ODDALA ELEMENTY OD NASZEGO CORE ELEMENTU, NATOMIAST PADDING ODDALA NASZ CORE ELEMENT OD INNYCH ELEMENTOW */
+
 section {
-    max-width: 50%;
+    max-width: 100%;
     width: 50%;
 }
 
@@ -156,13 +158,6 @@ form div .error {
     background-position: 97% 50%;
 }
 
-footer {
-    /* tutaj wlasnie chcemy zastosowac padding, poniewaz elementy sa wycentrowane w pionie i margin spowoduje,
-    ze przesunie sie wszystko w gore a padding to oddalenie od tego elementu wiec wszystko wtedy git */
-    /* MARGIN ODDALA ELEMENTY OD NASZEGO CORE ELEMENTU, NATOMIAST PADDING ODDALA NASZ CORE ELEMENT OD INNYCH ELEMENTOW */
-    padding: 50px;
-}
-
 .attribution a {
     padding: 3px;
     color: rgb(93, 17, 207);
@@ -178,7 +173,7 @@ footer {
 
 @media (max-width: 1400px) {
     main {
-        padding: 0 7rem 0;
+        padding: 0 7rem 3rem;
     }
 }
 
@@ -188,7 +183,7 @@ footer {
     }
     
     main {
-        padding: 0 5rem 0;
+        padding: 5rem;
         flex-direction: column;
     }
 
@@ -212,7 +207,7 @@ footer {
 
 @media (max-width: 620px) {
     main {
-        padding: 0 2rem 0;
+        padding: 2rem;
         background: url(images/bg-intro-desktop.png) no-repeat;
         background-size: cover;
         background-color: var(--red__bg);
