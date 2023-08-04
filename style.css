@@ -21,10 +21,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--red__bg);
+    overflow: hidden;
 }
 
 main {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +49,7 @@ section {
 }
 
 form {
-    width: 90%;
+    width: 80%;
     background-color: #fefefe;
     display: flex;
     flex-direction: column;
@@ -61,20 +62,58 @@ form div {
     flex-direction: column;
 }
 
+.success input{
+    color: var(--green__btn);
+    border-width: 2px;
+    border: 2px solid var(--green__btn);
+    background: url(images/icon-success.svg) no-repeat;
+    /* some complications, idk how to use such svg as frontendmentor provides, mine is bigger, and has different code;/ */
+    /* I WILL FIGURE IT OUT NP */
+    background-size: 5%;
+    background-position: 97% 50%;
+}
+
+.error input {
+    color: var(--red__bg);
+    border: 2px solid var(--red__bg);
+    background: url(images/icon-error.svg) no-repeat;
+    background-position: 97% 50%;
+}
+
+form div .error {
+    /* height: 1rem; */
+    margin: 7px 0 15px;
+    color: var(--red__bg);
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-style: italic;
+    text-align: right;
+}
+
 input, button {
     padding: 17px 25px;
-    margin: 7px 0;
     border-radius: 5px;
     border: 1px solid hsl(249, 10%, 26%, 0.3);
     font-weight: 600;
+    caret-color: var(--blue__btn);
+}
+
+/* czyli na click reaguje */
+input:focus {
+    outline: 1px solid var(--blue__btn);
 }
 
 button {
+    padding-bottom: 15px;
     background-color: var(--green__btn);
     color: #fefefe;
     text-transform: uppercase;
-    /* border: 1px solid darkgreen; */
+    border: 2px solid hsla(154, 68%, 33%, 0.3);
+    border-bottom: 5px solid hsla(154, 68%, 33%, 0.3);
+    /* bcs border-bottom didnt have border radius from latest indicator */
+    border-radius: 7px;
     font-size: 16px;
+    cursor: pointer;
 }
 
 form p {
@@ -91,17 +130,17 @@ form a {
 }
 
 h1 {
-    font-size: 3rem;
-    line-height: 55px;
+    font-size: 3.5rem;
+    line-height: 70px;
     margin-bottom: 30px;
 }
 
 .left__main__text p {
-    width: 55ch;
+    font-size: 1.3rem;
 }
 
 .purple__button {
-    width: 90%;
+    width: 80%;
     text-align: center;
     margin-bottom: 30px;
     color: var(--grey__footer);
@@ -113,4 +152,59 @@ h1 {
 .purple__button span {
     color: #fefefe;
     font-weight: 600;
+}
+
+@media (max-width: 1400px) {
+    main {
+        padding: 7rem;
+    }
+}
+
+@media (max-width: 1050px) {
+    body {
+        overflow: auto;
+    }
+    
+    main {
+        padding: 5rem;
+        flex-direction: column;
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left__main__text {
+        padding: 200px 0 30px;
+        text-align: center;
+    }
+
+    form p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 620px) {
+    main {
+        padding: 2rem;
+        background: url(images/bg-intro-desktop.png) no-repeat;
+        background-size: cover;
+        background-color: var(--red__bg);
+    } 
+
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    .left__main__text p {
+        font-size: 1rem;
+    }
+
+    .purple__button p {
+        padding: 20px 50px;
+    }
 }

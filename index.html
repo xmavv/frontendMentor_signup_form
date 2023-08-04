@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;800&family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <script src="app.js" defer></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 <body>
@@ -22,32 +22,35 @@
 
     <section>
       <div class="purple__button">
-        <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        <p><span>Try it free 7 days</span> then&nbsp;$20/mo.&nbsp;thereafter</p>
       </div>
 
-      <form action="#" class="actual__form">
+      <form action="#" id="form">
         <div>
-          <input type="text" placeholder="First Name" id="fname">
-          <!-- <span></span> -->
+          <input type="text" placeholder="First Name" id="fname" name="fname">
+          <div class="error"></div>
         </div>
 
         <div>
-          <input type="text" placeholder="Last Name" id="lname">
+          <input type="text" placeholder="Last Name" id="lname" name="lname">
+          <div class="error"></div>
         </div>
 
         <div>
-          <input type="text" placeholder="Email Adress" id="email">
+          <input type="text" placeholder="Email Adress" id="email" name="email">
+          <div class="error"></div>
         </div>
         
         <div>
-          <input type="text" placeholder="Password" id="password">
+          <input type="password" placeholder="Password" id="password" name="password">
+          <div class="error"></div>
         </div>
 
         <div>
-          <button>Claim your free trial</button> 
+          <button type="submit">Claim your free trial</button> 
         </div>
 
-        <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+        <p>By clicking the button, you are agreeing to our <a href="#">Terms&nbsp;and&nbsp;Services</a></p>
         </form>
     </section>
     <!-- <footer>
