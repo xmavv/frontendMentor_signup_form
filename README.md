@@ -43,7 +43,7 @@ How to write semantic HTML, and how to style its components inside CSS
 
 A bit responsive design, different styles, font-sizes, flexbox on smartphone screen
 
-Also I added an success (tic) icon, when input inside form is correctly filled, there wasn't such one default, feel free to use it
+Also I added an success (tic) icon, when input inside form is correctly filled, there wasn't such one default, feel free to use it (remember to add background-size: 24px; cause my svg isn't that good, this would fix it)
 
 ### Useful resources
 

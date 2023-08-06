@@ -68,7 +68,7 @@ h1 {
 }
 
 .purple__button p {
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .purple__button span {
@@ -147,7 +147,7 @@ form div .error {
     background: url(images/icon-success.svg) no-repeat;
     /* some complications, idk how to use such svg as frontendmentor provides, mine is bigger, and has different code;/ */
     /* I WILL FIGURE IT OUT NP */
-    background-size: 5%;
+    background-size: 24px;
     background-position: 97% 50%;
 }
 
@@ -227,5 +227,39 @@ form div .error {
 
     .attribution {
         font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .purple__button p {
+        font-size: 0.8rem;
+    }
+
+    form {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-height: 850px) {
+    main {
+        padding-top: 17rem;
+    }
+}
+
+@media (max-height: 750px) {
+    main {
+        padding-top: 25rem;
+    }
+}
+
+@media (max-height: 650px) {
+    main {
+        padding-top: 40rem;
+    }
+}
+
+@media (max-height: 400px) {
+    main {
+        padding-top: 40rem;
     }
 }
