@@ -235,7 +235,12 @@ form div .error {
         font-size: 0.8rem;
     }
 
+    .purple__button {
+        width: 100%;
+    }
+
     form {
+        width: 100%;
         padding: 0.8rem;
     }
 }
