@@ -10,6 +10,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [What I added](#what-i-added)
   - [Useful resources](#useful-resources)
 
 ## Welcome 😎
@@ -42,6 +43,8 @@ I learned how to do good (no live yet) form valitadion in js, including css prop
 How to write semantic HTML, and how to style its components inside CSS
 
 A bit responsive design, different styles, font-sizes, flexbox on smartphone screen
+
+### What I added
 
 Also I added an success (tic) icon, when input inside form is correctly filled, there wasn't such one default, feel free to use it (remember to add background-size: 24px; cause my svg isn't that good, this would fix it)
 
